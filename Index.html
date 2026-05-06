@@ -67,7 +67,7 @@
 
         /* Grid background */
         .grid-bg {
-            background-image: 
+            background-image:
                 linear-gradient(to right, #80808005 1px, transparent 1px),
                 linear-gradient(to bottom, #80808005 1px, transparent 1px);
             background-size: 24px 24px;
@@ -93,18 +93,6 @@
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
-        }
-        @keyframes typewriter {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-        @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
-            50% { opacity: 1; transform: scale(1) rotate(180deg); }
         }
         @keyframes bounceIn {
             0% { transform: scale(0.3); opacity: 0; }
@@ -286,6 +274,7 @@
             background: #0a0a0a;
             overflow: hidden;
             position: relative;
+            transition: all 0.5s ease;
         }
 
         /* Toast notification */
@@ -386,7 +375,7 @@
             <div class="animate-in delay-700 flex justify-center mt-8 mb-10">
                 <div class="msg-bubble text-left">
                     <p class="text-sm text-neutral-300 font-light leading-relaxed">
-                        "Maine tumhe block kiya... ab mujhe unblock karna nahi aata" 
+                        "Maine tumhe block kiya... ab mujhe unblock karna nahi aata"
                         <span class="text-neutral-500">— Tum 🥺</span>
                     </p>
                     <p class="text-sm text-purple-400 font-light mt-2">
@@ -555,38 +544,38 @@
                 <!-- Visual path -->
                 <div class="flex flex-col gap-4 max-w-xs">
                     <div class="flex items-center gap-3 phone-step-indicator active" data-step="0">
-                        <div class="w-8 h-8 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0 transition-colors duration-300">
                             <span class="text-xs">📱</span>
                         </div>
-                        <span class="text-sm text-neutral-400">Open Instagram</span>
+                        <span class="text-sm text-neutral-400 transition-colors duration-300">Open Instagram</span>
                     </div>
                     <div class="w-px h-3 bg-neutral-800 ml-4"></div>
                     <div class="flex items-center gap-3 phone-step-indicator" data-step="1">
-                        <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center flex-shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center flex-shrink-0 transition-colors duration-300">
                             <span class="text-xs">👤</span>
                         </div>
-                        <span class="text-sm text-neutral-500">Go to Profile</span>
+                        <span class="text-sm text-neutral-500 transition-colors duration-300">Go to Profile</span>
                     </div>
                     <div class="w-px h-3 bg-neutral-800 ml-4"></div>
                     <div class="flex items-center gap-3 phone-step-indicator" data-step="2">
-                        <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center flex-shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center flex-shrink-0 transition-colors duration-300">
                             <span class="text-xs">☰</span>
                         </div>
-                        <span class="text-sm text-neutral-500">Open Menu</span>
+                        <span class="text-sm text-neutral-500 transition-colors duration-300">Open Menu</span>
                     </div>
                     <div class="w-px h-3 bg-neutral-800 ml-4"></div>
                     <div class="flex items-center gap-3 phone-step-indicator" data-step="3">
-                        <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center flex-shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center flex-shrink-0 transition-colors duration-300">
                             <span class="text-xs">📊</span>
                         </div>
-                        <span class="text-sm text-neutral-500">Your Activity</span>
+                        <span class="text-sm text-neutral-500 transition-colors duration-300">Your Activity</span>
                     </div>
                     <div class="w-px h-3 bg-neutral-800 ml-4"></div>
                     <div class="flex items-center gap-3 phone-step-indicator" data-step="4">
-                        <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center flex-shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center flex-shrink-0 transition-colors duration-300">
                             <span class="text-xs">🔓</span>
                         </div>
-                        <span class="text-sm text-neutral-500">Tap Unblock</span>
+                        <span class="text-sm text-neutral-500 transition-colors duration-300">Tap Unblock</span>
                     </div>
                 </div>
             </div>
@@ -627,7 +616,7 @@
             <p class="text-neutral-500 text-sm font-light mb-10">
                 Choice tumhari hai, par main wait kar raha hoon 🥺
             </p>
-            
+           
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button class="cute-btn" id="unblockBtn" onclick="handleUnblock()">
                     Haan, Unblock Karti Hoon 💜
@@ -669,7 +658,7 @@
         // ========== FLOATING HEARTS ==========
         const heartsContainer = document.getElementById('heartsContainer');
         const heartEmojis = ['💜', '🤍', '✨', '🌙', '🦋', '🌸'];
-        
+       
         function createHeart() {
             const heart = document.createElement('div');
             heart.className = 'heart';
@@ -679,10 +668,10 @@
             heart.style.animationDelay = Math.random() * 5 + 's';
             heart.style.fontSize = (14 + Math.random() * 16) + 'px';
             heartsContainer.appendChild(heart);
-            
+           
             setTimeout(() => heart.remove(), 25000);
         }
-        
+       
         // Create initial hearts
         for (let i = 0; i < 15; i++) {
             setTimeout(createHeart, i * 400);
@@ -770,17 +759,14 @@
                     <div style="padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.03);display:flex;align-items:center;gap:10px;">
                         <span style="font-size:14px;">⚙️</span><span style="font-size:12px;color:#a3a3a3;">Settings and privacy</span>
                     </div>
-                    <div style="padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.03);display:flex;align-items:center;gap:10px;">
-                        <span style="font-size:14px;">⏰</span><span style="font-size:12px;color:#a3a3a3;">Your activity</span>
+                    <div style="padding:10px 12px;border-radius:10px;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.3);display:flex;align-items:center;gap:10px;">
+                        <span style="font-size:14px;">⏰</span><span style="font-size:12px;color:#c084fc;font-weight:500;">Your activity ← YEH!</span>
                     </div>
                     <div style="padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.03);display:flex;align-items:center;gap:10px;">
                         <span style="font-size:14px;">🔖</span><span style="font-size:12px;color:#a3a3a3;">Saved</span>
                     </div>
                     <div style="padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.03);display:flex;align-items:center;gap:10px;">
                         <span style="font-size:14px;">🔔</span><span style="font-size:12px;color:#a3a3a3;">Notifications</span>
-                    </div>
-                    <div style="padding:10px 12px;border-radius:10px;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.3);display:flex;align-items:center;gap:10px;">
-                        <span style="font-size:14px;">⏰</span><span style="font-size:12px;color:#c084fc;font-weight:500;">Your activity ← YEH!</span>
                     </div>
                 </div>
             </div>`,
@@ -799,9 +785,6 @@
                     </div>
                     <div style="padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.03);display:flex;align-items:center;gap:10px;">
                         <span style="font-size:14px;">Following</span><span style="font-size:12px;color:#a3a3a3;">Followers and following</span>
-                    </div>
-                    <div style="padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.03);display:flex;align-items:center;gap:10px;">
-                        <span style="font-size:14px;">💬</span><span style="font-size:12px;color:#a3a3a3;">Recently deleted</span>
                     </div>
                 </div>
             </div>`,
@@ -832,135 +815,133 @@
         const phoneScreen = document.getElementById('phoneScreen');
         phoneScreen.innerHTML = phoneScreens[0];
 
-        // Auto-rotate phone screens
         function updatePhone(step) {
             phoneScreen.style.opacity = '0';
             phoneScreen.style.transform = 'scale(0.95)';
+            
             setTimeout(() => {
                 phoneScreen.innerHTML = phoneScreens[step];
                 phoneScreen.style.opacity = '1';
                 phoneScreen.style.transform = 'scale(1)';
+
+                // Update indicators on the side
+                document.querySelectorAll('.phone-step-indicator').forEach(el => {
+                    const elStep = parseInt(el.getAttribute('data-step'));
+                    const circle = el.querySelector('div');
+                    const text = el.querySelector('span:last-child');
+
+                    if (elStep === step) {
+                        circle.classList.remove('bg-neutral-800', 'border-neutral-700');
+                        circle.classList.add('bg-purple-500/20', 'border-purple-500/30');
+                        text.classList.remove('text-neutral-500');
+                        text.classList.add('text-neutral-400');
+                    } else {
+                        circle.classList.add('bg-neutral-800', 'border-neutral-700');
+                        circle.classList.remove('bg-purple-500/20', 'border-purple-500/30');
+                        text.classList.add('text-neutral-500');
+                        text.classList.remove('text-neutral-400');
+                    }
+                });
             }, 300);
         }
 
-        phoneScreen.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-
-        function updateIndicators(step) {
-            document.querySelectorAll('.phone-step-indicator').forEach((el, i) => {
-                const circle = el.querySelector('div');
-                const text = el.querySelector('span');
-                if (i <= step) {
-                    circle.className = 'w-8 h-8 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0';
-                    text.className = 'text-sm text-neutral-400';
-                } else {
-                    circle.className = 'w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center flex-shrink-0';
-                    text.className = 'text-sm text-neutral-500';
-                }
-            });
-        }
-
+        // Auto-play phone demo loop
         setInterval(() => {
             currentStep = (currentStep + 1) % phoneScreens.length;
             updatePhone(currentStep);
-            updateIndicators(currentStep);
         }, 3000);
 
-        // ========== UNBLOCK BUTTON HANDLER ==========
-        function handleUnblock() {
-            // Confetti!
+
+        // ========== CONFETTI LOGIC ==========
+        function fireConfetti() {
             const canvas = document.getElementById('confettiCanvas');
-            canvas.style.display = 'block';
             const ctx = canvas.getContext('2d');
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
+            canvas.style.display = 'block';
 
-            const confettiPieces = [];
-            const colors = ['#a855f7', '#ec4899', '#3b82f6', '#c084fc', '#f472b6', '#60a5fa', '#ffffff'];
+            let particles = [];
+            const colors = ['#a855f7', '#ec4899', '#3b82f6', '#ffffff'];
 
-            for (let i = 0; i < 150; i++) {
-                confettiPieces.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height - canvas.height,
-                    size: Math.random() * 8 + 3,
+            // Create particles
+            for(let i=0; i<100; i++) {
+                particles.push({
+                    x: window.innerWidth / 2,
+                    y: window.innerHeight / 1.5, // Start near button area
+                    w: Math.random() * 8 + 4,
+                    h: Math.random() * 8 + 4,
                     color: colors[Math.floor(Math.random() * colors.length)],
-                    speedY: Math.random() * 3 + 2,
-                    speedX: (Math.random() - 0.5) * 4,
-                    rotation: Math.random() * 360,
-                    rotationSpeed: (Math.random() - 0.5) * 10,
-                    opacity: 1
+                    vx: (Math.random() - 0.5) * 25,
+                    vy: (Math.random() - 1) * 25 - 5, // Explode upwards
+                    grav: 0.5,
+                    rot: Math.random() * 360,
+                    rotSpeed: (Math.random() - 0.5) * 10
                 });
             }
 
-            let frame = 0;
             function animateConfetti() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                let alive = false;
+                let active = false;
+                
+                particles.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vy += p.grav;
+                    p.rot += p.rotSpeed;
+                    p.vx *= 0.95; // friction
+                    p.vy *= 0.95; // air resistance
 
-                confettiPieces.forEach(p => {
-                    if (p.opacity <= 0) return;
-                    alive = true;
-                    p.y += p.speedY;
-                    p.x += p.speedX;
-                    p.rotation += p.rotationSpeed;
-                    if (frame > 60) p.opacity -= 0.01;
+                    if(p.y < canvas.height) active = true;
 
                     ctx.save();
                     ctx.translate(p.x, p.y);
-                    ctx.rotate(p.rotation * Math.PI / 180);
-                    ctx.globalAlpha = Math.max(0, p.opacity);
+                    ctx.rotate(p.rot * Math.PI / 180);
                     ctx.fillStyle = p.color;
-                    ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+                    ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
                     ctx.restore();
                 });
 
-                frame++;
-                if (alive && frame < 200) {
+                if(active) {
                     requestAnimationFrame(animateConfetti);
                 } else {
                     canvas.style.display = 'none';
                 }
             }
             animateConfetti();
+        }
 
-            // Change button text
+        // ========== BUTTON HANDLERS ==========
+        function handleUnblock() {
+            fireConfetti();
+            showToast("💜 Wohooo! See you soon baby!");
+            
+            // Update button state to be playful
             const btn = document.getElementById('unblockBtn');
-            btn.innerHTML = '🥳 YAY! Thank You!';
-            btn.style.background = 'linear-gradient(135deg, #ec4899, #a855f7)';
-
-            // Show toast
-            showToast('💜 Mujhe pata tha tum karogi! 🦋');
-
-            // Change easter egg
-            document.getElementById('easterEgg').textContent = 'Ab jaldi se unblock karo aur DM karo 😤💜';
-            document.getElementById('easterEgg').style.color = '#a855f7';
-
-            // Burst of hearts
-            for (let i = 0; i < 20; i++) {
-                setTimeout(createHeart, i * 100);
-            }
+            btn.innerText = "Done! Msg me now 💌";
+            btn.style.background = "linear-gradient(135deg, #10b981, #059669)"; // Green gradient for success
+            
+            // Update Easter Egg
+            const egg = document.getElementById('easterEgg');
+            egg.innerText = "I knew you couldn't stay mad 😉";
+            egg.classList.add('text-purple-400');
         }
 
         function handleNotYet() {
-            showToast('😶 Theek hai... main wait karunga 🥺');
-            document.getElementById('easterEgg').textContent = 'Please? 🥺 Pretty please? 🥺🥺';
-            document.getElementById('easterEgg').style.color = '#ec4899';
+            // Playful guilt trip
+            showToast("😶 Theek hai... thoda aur wait karlo");
+            
+            // Shake the "Not Yet" button slightly? 
+            // Or update the text to be cuter
+            const egg = document.getElementById('easterEgg');
+            const messages = [
+                "Please? 🥺👉👈",
+                "Are you sure? 💔",
+                "I made this whole website for you!",
+                "Purple button is nicer... trust me"
+            ];
+            egg.innerText = messages[Math.floor(Math.random() * messages.length)];
+            egg.classList.add('text-pink-400');
         }
-
-        // ========== EASTER EGG: Triple click on heart ==========
-        let clickCount = 0;
-        let clickTimer;
-        document.querySelector('.animate-heartbeat')?.addEventListener('click', () => {
-            clickCount++;
-            clearTimeout(clickTimer);
-            if (clickCount >= 3) {
-                clickCount = 0;
-                showToast('💜 dil toh pagal hai tumhare liye!');
-                for (let i = 0; i < 30; i++) {
-                    setTimeout(createHeart, i * 80);
-                }
-            }
-            clickTimer = setTimeout(() => clickCount = 0, 800);
-        });
     </script>
 </body>
 </html>
